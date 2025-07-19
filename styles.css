@@ -4,6 +4,7 @@ input[type="text"] {
     outline: none; /* Removes the focus outline */
     border-bottom: 1px solid #000; /* Adds a 1px solid black bottom border */
     width: 90%;
+    background-color: #89CFF0;
 }
 
 
@@ -17,6 +18,9 @@ input[type="text"] {
     color: gray;
 }
 
+body {
+    background-color: #89CFF0;
+}
 
 h1, #buttons {
     display: flex;
@@ -39,7 +43,15 @@ li {
     margin-top: 20px;
 }
 
-@media (max-width: 600px) {
-    
+@media (max-width: 800px) {
+    ul {
+        padding-left: 2%;
+    }
+}
+
+@media (max-width: 700px) { /* 576 */
+    input[type="text"] {
+        width: 85%;
+    }
 }
 
