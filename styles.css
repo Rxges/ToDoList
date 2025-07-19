@@ -1,0 +1,45 @@
+
+input[type="text"] {
+    border: none;
+    outline: none; /* Removes the focus outline */
+    border-bottom: 1px solid #000; /* Adds a 1px solid black bottom border */
+    width: 90%;
+}
+
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.xButton {
+    margin-left: 2%;
+    border: 1px bold gray;
+    color: gray;
+}
+
+
+h1, #buttons {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type:none;
+    padding-left: 5%;
+    margin: 0;
+}
+
+
+li {
+    margin: 5px 0px 5px 0px;
+}
+
+#addButton, #remove {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    
+}
+
