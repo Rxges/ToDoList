@@ -77,3 +77,36 @@ function removeX() {
     }
 }
 
+
+
+
+
+
+function saveList() {
+    var listObject = document.querySelectorAll(".text");
+    var listObjectText = [];
+    for(var i = 0; i<listObject.length; i++) {
+        listObjectText.push(listObject[i].value);
+    }
+    localStorage.setItem("userInput", JSON.stringify(listObjectText));
+}
+window.addEventListener("beforeunload", saveList); // runs the function saveList() before the web page closes
+//setInterval(saveList, 100);
+
+function setSavedLists() {
+    var savedItem = JSON.parse(localStorage.getItem("userInput"));
+
+    if(savedItem && savedItem.length > 0) {
+        document.querySelector("#list-container").innerHTML = "";
+        for(var i = 0; i <savedItem.length; i++) {
+            document.querySelector("#list-container").insertAdjacentHTML("beforeend", "<li class=" + i + "><input type='checkbox' class='checkbox'><input type='text' class='text' value=" + savedItem[i] + 
+                "></li>");
+            listCounter++;
+        }
+    }
+}
+document.addEventListener('DOMContentLoaded', function() { // runs when the page loads
+    setSavedLists();
+});
+//setSavedLists();
+
